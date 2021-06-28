@@ -22,10 +22,10 @@ const NavBar = () => {
             </Link>
           </HStack>
           <VStack className="scene_fast scene_element--clippathdown"  display={!menu ? "none" : "flex"}  bgColor="primary" position="absolute" top="70px" width="100vw" zIndex="10" >
-            <Link _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  href="#welcome" py="4px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Welcome</Link>
-            <Link _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  href="#projects" py="4px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Projects</Link>
+            <Link _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  href="#welcome" py="4px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Bienvenida</Link>
+            <Link _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  href="#projects" py="4px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Proyectos</Link>
             {/* <Link py="4px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Technologies</Link> */}
-            <Link href="#contact" _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  py="4px" pb="10px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Contact</Link>
+            <Link href="#contact" _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  py="4px" pb="10px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Contacto</Link>
           </VStack>
         </Box>
     )

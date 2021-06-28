@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider,CSSReset } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import FormContact from "../components/FormContact";
 import NavBar from "../components/NavBar";
@@ -9,6 +9,7 @@ import theme from "../styles/theme";
 function App() {
   return (
     <ChakraProvider theme={theme} >
+      <CSSReset/>
       <NavBar/>
       <Welcome/>
       <Projects/>

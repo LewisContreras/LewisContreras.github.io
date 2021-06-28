@@ -30,7 +30,7 @@ const FormContact = () => {
     })
 
     return (
-        <Center id="contact" py="40px" w="100vw" minH="calc(100vh - 170px)" bgColor="terciary" >
+        <Center id="contact" py="40px" w="100vw" minH="calc(100vh - 140px)" bgColor="terciary" >
             <VStack spacing="10px" px="10px" py="10px" as="form" onSubmit={formik.handleSubmit} borderRadius="8px" w={["94%","500px"]} bgColor="primary" >
                 <Text fontSize="3xl" color="secondary" fontWeight="600" >Contacto</Text>
                 <Text fontSize="xl" color="terciary" >Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto.</Text>

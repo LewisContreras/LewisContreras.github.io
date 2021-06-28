@@ -6,6 +6,12 @@ const theme = extendTheme({
         body: {
           color: "#000"
         },
+        a:{
+          _hover:{
+            textDecoration:"none",
+            outline: "none"
+          }
+        }
       },
     },
  

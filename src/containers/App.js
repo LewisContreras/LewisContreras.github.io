@@ -8,13 +8,14 @@ import theme from "../styles/theme";
 
 function App() {
   return (
-    <ChakraProvider theme={theme} >
+    <ChakraProvider  theme={theme} >
       <CSSReset/>
       <NavBar/>
       <Welcome/>
       <Projects/>
       <FormContact/>
       <Footer/>
+
     </ChakraProvider>
   );
 }

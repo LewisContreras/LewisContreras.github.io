@@ -40,6 +40,10 @@
     animation-name: clipMidUp;
 }
 
+.scene_element--clipmidspread {
+    animation-name: clipMidSpread;
+}
+
 .scene_element--fadeoutleft {
     animation-name: fadeOutLeft;
 }
@@ -140,3 +144,14 @@
         clip-path: circle(112% at 50% 100%);
     }
     }
+
+    @keyframes clipMidSpread {
+        0% {
+            clip-path: circle(0% at 50% 50%);
+            
+        }
+        
+        100% {
+            clip-path: circle(100% at 50% 50%);
+        }
+        }

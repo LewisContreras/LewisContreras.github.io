@@ -4,7 +4,10 @@ const theme = extendTheme({
     styles: {
       global: {
         body: {
-          color: "#000"
+          color: "#000",
+          margin: 0,
+          padding: 0,
+          boxSizing: "border-box"
         },
         a:{
           _hover:{

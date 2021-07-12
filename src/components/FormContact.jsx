@@ -2,6 +2,7 @@ import {  Box, Button, Center, Input, Text, Textarea, VStack } from '@chakra-ui/
 import { useFormik } from 'formik'
 import * as Yup from "yup"
 import React, { useState } from 'react'
+import ScrollReveal from "scrollreveal"
 
 const FormContact = ({language}) => {
 
@@ -29,10 +30,14 @@ const FormContact = ({language}) => {
         }
     })
 
+    ScrollReveal().reveal(".form-contact",{
+        opacity: 0
+    })
+
     return (
         <Box position="relative" >
-            <Center as="section" id="contact" pt="140px" pb="40px" w="100vw" minH="calc(100vh - 140px)" bgColor="terciary" >
-            <VStack spacing="10px" px="10px" py="10px" as="form" onSubmit={formik.handleSubmit} borderRadius="8px" w={["94%","500px"]} bgColor="primary" >
+            <Center as="section" id="contact" pt="140px" pb="40px" w="100vw" minH="calc(100vh - 80px)" bgColor="terciary" >
+            <VStack className="form-contact" spacing="10px" px="10px" py="10px" as="form" onSubmit={formik.handleSubmit} borderRadius="8px" w={["94%","500px"]} bgColor="primary" >
                 <Text fontSize="3xl" color="secondary" fontWeight="600" >{language ? "Contacto" : "Contact" }</Text>
                 <Text fontSize="xl" color="terciary" >{language ? "Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto." : "If you are interested on work with me in your next project, don't doubt on get in touch with me." }</Text>
                 <Input type="text" color="terciary" name="namePerson" value={formik.values.namePerson} onChange={formik.handleChange}  placeholder={language ? "Nombre" : "Name" } />

@@ -1,8 +1,28 @@
 import { Box, Button, Grid, GridItem, HStack, Icon, Link, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
+import ScrollReveal from "scrollreveal"
 
 const Projects = ({language}) => {
+
+    ScrollReveal().reveal(".first-project",{
+        distance: '120%',
+        origin: 'bottom',
+        opacity: null
+    })
+
+    ScrollReveal().reveal(".second-project",{
+        distance: '120%',
+        origin: 'left',
+        opacity: null
+    })
+
+    ScrollReveal().reveal(".third-project",{
+        distance: '120%',
+        origin: 'right',
+        opacity: null
+    })
+
     return (
         <Box position="relative" >
             <Box as="section" zIndex="10"  id="projects" py="90px" px="5%" bgColor="secondary" w="100vw" >
@@ -15,7 +35,7 @@ const Projects = ({language}) => {
                 {language ? "A lo largo de mi carrera como Frontend, he tenido el privilegio de trabajar en proyectos retadores e increíbles." : "Along my career as Fronted, I've had the privilege of work in challenging and incredible projects." }
                     
                 </GridItem>
-                <GridItem transition="1s" _hover={{transform:"scale(1.01)"}} colSpan={["1","2"]} borderRadius="4px" bgImage={["url('https://i.imgur.com/rwfsmdJ.png')","url('https://i.imgur.com/jvChYsG.png')" ]}bgPosition="center" bgRepeat="no-repeat" boxShadow="2xl" bgSize="cover" position="relative" zIndex="0" >
+                <GridItem className="first-project" transition="1s" _hover={{transform:"scale(1.01)"}} colSpan={["1","2"]} borderRadius="4px" bgImage={["url('https://i.imgur.com/rwfsmdJ.png')","url('https://i.imgur.com/jvChYsG.png')" ]}bgPosition="center" bgRepeat="no-repeat" boxShadow="2xl" bgSize="cover" position="relative" zIndex="0" >
                     <Box boxShadow="2xl" borderRadius="8px" position="absolute" p="10px" bottom="30px" left="-10px" bgColor="primary" w={["95%","50%"]} height="40%" >
                         <Text  fontWeight="600" fontSize="3xl" color="terciary" >Blockmaster</Text>
                         <Text fontSize={["xl","xl","xl","2xl"]} color="terciary" >{language ? "Revive una tienda icónica para rentar películas." : "Relive an iconic shop to rent movies." } </Text>
@@ -29,7 +49,7 @@ const Projects = ({language}) => {
                         </HStack>
                     </Box>
                 </GridItem>
-                <GridItem transition="1s" _hover={{transform:"scale(1.01)"}}  borderRadius="4px" bgImage={["url('https://i.imgur.com/nx7EOsb.png')","url('https://i.imgur.com/cqnEQS8.png')"]} bgPosition="center" bgRepeat="no-repeat" boxShadow="2xl" bgSize="cover" position="relative" zIndex="0" >
+                <GridItem className="second-project" transition="1s" _hover={{transform:"scale(1.01)"}}  borderRadius="4px" bgImage={["url('https://i.imgur.com/nx7EOsb.png')","url('https://i.imgur.com/cqnEQS8.png')"]} bgPosition="center" bgRepeat="no-repeat" boxShadow="2xl" bgSize="cover" position="relative" zIndex="0" >
                     <Box boxShadow="2xl" borderRadius="8px" position="absolute" p="10px" bottom="30px" left="-10px" bgColor="primary" w={["95%","90%","70%"]} height={["40%","50%"]} >
                         <Text  fontWeight="600" fontSize={["3xl","xl","2xl" ]}color="terciary" >{language ? "App de adopción" : "Adoption App" }</Text>
                         <Text fontSize={["xl","16px"]} color="terciary" >{language ? "Aplicación en la que podrás publicar y adoptar mascotas." : "App which you can post and adopt pets." } </Text>
@@ -43,7 +63,7 @@ const Projects = ({language}) => {
                         </HStack>
                     </Box>
                 </GridItem>
-                <GridItem transition="1s" _hover={{transform:"scale(1.01)"}}  borderRadius="4px" bgImage={["url('https://i.imgur.com/lT1gWYh.png')","url('https://i.imgur.com/5dFQyjJ.png')"]} bgPosition="center" bgRepeat="no-repeat" boxShadow="2xl" bgSize="cover" position="relative" zIndex="0" >
+                <GridItem className="third-project" transition="1s" _hover={{transform:"scale(1.01)"}}  borderRadius="4px" bgImage={["url('https://i.imgur.com/lT1gWYh.png')","url('https://i.imgur.com/5dFQyjJ.png')"]} bgPosition="center" bgRepeat="no-repeat" boxShadow="2xl" bgSize="cover" position="relative" zIndex="0" >
                     <Box boxShadow="2xl" borderRadius="8px" position="absolute" p="10px" bottom="30px" left="-10px" bgColor="primary" w={["95%","90%","70%"]} height={["40%","50%"]} >
                         <Text  fontWeight="600" fontSize={["3xl","2xl"]} color="terciary" >{language ? "Documentación" : "Documentation" }</Text>
                         <Text fontSize={["xl","16px"]} color="terciary" >{language ? "Documentación técnica de conceptos básicos de programación." : "Technical documentation about basic concepts of programming." }</Text>

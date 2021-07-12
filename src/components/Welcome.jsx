@@ -1,15 +1,30 @@
 import { Box, Center, Flex, Img, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
+import ScrollReveal from "scrollreveal"
+
 
 const Welcome = ({language}) => {
+
+    ScrollReveal().reveal(".img-welcome",{
+        distance: '120%',
+        origin: 'bottom',
+        opacity: null
+    })
+
+    ScrollReveal().reveal(".info-welcome",{
+        distance: '120%',
+        origin: 'left',
+        opacity: null
+    })
+    
     return (
         <Box>
         <Center as="section" id="welcome" pt={["100px","100px","20px"]} bgColor="primary" minH="100vh" w="100vw" >
         <Flex alignItems="center" textAlign="center" maxW="90%" flexDirection={["column","column","row-reverse"]} justifyContent="center" >
-            <Img 
+            <Img className="img-welcome"
             // className="scene_element scene_element--clipmidspread" 
             maxW={["80%","80%","30%"]} maxH={["35vh","35vh","60vh"]} borderRadius="20px" ml={["0px","0px","50px"]} src="https://i.imgur.com/92Ht5DC.jpeg" />
-            <VStack
+            <VStack className="info-welcome"
             //  className="scene_element scene_element--fadein" 
               maxW={["auto","auto","50%","40%"]} >
             <Text pt="20px" fontWeight="600" color="terciary" fontSize={["3xl","3xl", "4xl"]} >{language ? "¡Hola, bienvenido, soy Lewis Contreras!" : "¡Hello, welcome, I'm Lewis Contreras!" }</Text>

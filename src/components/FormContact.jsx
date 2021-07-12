@@ -30,7 +30,8 @@ const FormContact = ({language}) => {
     })
 
     return (
-        <Center as="section" id="contact" py="40px" w="100vw" minH="calc(100vh - 140px)" bgColor="terciary" >
+        <Box position="relative" >
+            <Center as="section" id="contact" pt="140px" pb="40px" w="100vw" minH="calc(100vh - 140px)" bgColor="terciary" >
             <VStack spacing="10px" px="10px" py="10px" as="form" onSubmit={formik.handleSubmit} borderRadius="8px" w={["94%","500px"]} bgColor="primary" >
                 <Text fontSize="3xl" color="secondary" fontWeight="600" >{language ? "Contacto" : "Contact" }</Text>
                 <Text fontSize="xl" color="terciary" >{language ? "Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto." : "If you are interested on work with me in your next project, don't doubt on get in touch with me." }</Text>
@@ -43,6 +44,7 @@ const FormContact = ({language}) => {
                 <Button type="submit" onClick={()=>setSubmit(true)} _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  colorScheme="teal" >{language ? "Enviar" : "Send" }</Button>
             </VStack>
         </Center>
+        </Box>
     )
 }
 

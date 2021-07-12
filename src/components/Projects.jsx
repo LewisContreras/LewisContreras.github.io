@@ -4,7 +4,8 @@ import { FaArrowRight } from 'react-icons/fa'
 
 const Projects = ({language}) => {
     return (
-        <Box as="section" id="projects" py="90px" px="5%" bgColor="secondary" w="100vw" >
+        <Box position="relative" >
+            <Box as="section" zIndex="10"  id="projects" py="90px" px="5%" bgColor="secondary" w="100vw" >
             <Text className="scene_element scene_element--fadeinleft" pb="30px" color="primary" fontSize="3xl" fontWeight="600" >{language ? "Proyectos" : "Projects" }</Text>
             <Grid gridTemplateColumns={["1fr","1fr 1fr"]} templateRows={["0.5fr 1fr 600px 600px 600px","1fr 540px 350px"]} gap="40px">
                 <GridItem color="primary" fontSize="26px" fontWeight="600" >
@@ -63,6 +64,13 @@ const Projects = ({language}) => {
                     <Icon as={FaArrowRight} />
                 </HStack>
             </Link>
+            
+            {/* clipPath="polygon(100% 0, 0 0, 100% 100%)"  */}
+
+        </Box>
+        <Box position="absolute" bgColor="secondary" left="0" w="100vw"  height="60px" zIndex="2" clipPath="polygon(100% 0, 0 0, 0 100%)"
+            >
+            </Box>
         </Box>
     )
 }

@@ -9,6 +9,17 @@ const NavBar = ({language,setLanguage}) => {
 
     const handleSmooth = (e) =>{
       e.preventDefault()
+      const links = document.querySelectorAll(".navbar-link")
+      for (const i of links) {
+        if (e.target == i) {
+          i.style.borderBottom = "2px solid"
+          i.style.color = "#38B2AC"
+        }else{
+          i.style.borderBottom = "none"
+          i.style.color = "#CBD5E0"
+        }
+        
+      }
       const section = e.target.getAttribute("href")
       document.querySelector(section).scrollIntoView({
         behavior: "smooth"
@@ -27,10 +38,10 @@ const NavBar = ({language,setLanguage}) => {
             <HStack 
             // className="scene_element scene_element--fadeinleft"
              display={["none","flex"]} spacing="30px" >
-            <Link _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  href="#welcome" fontWeight="600" textAlign="center" color="terciary" onClick={handleSmooth} >{language ? "Bienvenido" : "Welcome" }</Link>
-            <Link _hover={{textDecoration:"none"}} _focus={{outline:"none"}} fontWeight="600" href="#projects"  color="terciary" onClick={handleSmooth}  >{language ? "Proyectos" : "Projects" }</Link>
+            <Link className="navbar-link"  _hover={{textDecoration:"none"}} _focus={{outline:"none"}}  href="#welcome" fontWeight="600" textAlign="center" color="secondary" borderBottom="3px solid" onClick={handleSmooth} >{language ? "Bienvenido" : "Welcome" }</Link>
+            <Link className="navbar-link" _hover={{textDecoration:"none"}} _focus={{outline:"none"}} fontWeight="600" href="#projects"  color="terciary" onClick={handleSmooth}  >{language ? "Proyectos" : "Projects" }</Link>
             {/* <Link py="4px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Technologies</Link> */}
-            <Link href="#contact" _hover={{textDecoration:"none"}} _focus={{outline:"none"}} fontWeight="600" color="terciary" onClick={handleSmooth}  >{language ? "Contacto" : "Contact" }</Link>
+            <Link className="navbar-link" href="#contact" _hover={{textDecoration:"none"}} _focus={{outline:"none"}} fontWeight="600" color="terciary" onClick={handleSmooth}  >{language ? "Contacto" : "Contact" }</Link>
             </HStack>
             <HStack>
               <Button onClick={()=>setLanguage(!language)} >

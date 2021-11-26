@@ -84,9 +84,6 @@ const Projects = ({language}) => {
                     <Icon as={FaArrowRight} />
                 </HStack>
             </Link>
-            
-            {/* clipPath="polygon(100% 0, 0 0, 100% 100%)"  */}
-
         </Box>
         <Box position="absolute" bgColor="secondary" left="0" w="100vw"  height="60px" zIndex="2" clipPath="polygon(100% 0, 0 0, 0 100%)"
             >

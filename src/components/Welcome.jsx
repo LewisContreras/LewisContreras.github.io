@@ -7,7 +7,7 @@ const Welcome = ({language}) => {
 
     ScrollReveal().reveal(".img-welcome",{
         distance: '120%',
-        origin: 'bottom',
+        origin: 'right',
         opacity: null
     })
 

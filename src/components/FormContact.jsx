@@ -40,7 +40,11 @@ const FormContact = ({language}) => {
             <VStack className="form-contact" spacing="10px" px="10px" py="10px" as="form" onSubmit={formik.handleSubmit} borderRadius="8px" w={["94%","500px"]} bgColor="primary" >
                 <Text fontSize="3xl" color="secondary" fontWeight="600" >{language ? "Contacto" : "Contact" }</Text>
                 <Text fontSize="xl" color="terciary" >{language ? "Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto." : "If you are interested on work with me in your next project, don't doubt on get in touch with me." }</Text>
-                <Input type="text" color="terciary" name="namePerson" value={formik.values.namePerson} onChange={formik.handleChange}  placeholder={language ? "Nombre" : "Name" } />
+                <Input type="text" color="terciary" name="namePerson" 
+                // _selected={{bgColor:"green"}}
+                // _focus={{bgColor:"terciary"}}
+                // _active={{bgColor:"terciary"}}
+                value={formik.values.namePerson} onChange={formik.handleChange}   placeholder={language ? "Nombre" : "Name" } />
                 {formik.errors.namePerson && submit ? <Box color="secondary" >{formik.errors.namePerson}</Box>:null}
                 <Input type="email"  color="terciary" placeholder={language ? "Correo" : "Email" } name="email" value={formik.values.email} onChange={formik.handleChange}  />
                 {formik.errors.email && submit ? <Box color="secondary" >{formik.errors.email}</Box>:null}

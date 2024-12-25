@@ -81,6 +81,7 @@ const Projects = () => {
                   width="100%"
                   colorScheme="teal"
                   _focus={{ outline: "none" }}
+                  color="primary"
                 >
                   Repositorio
                 </Button>
@@ -96,6 +97,7 @@ const Projects = () => {
                   width="100%"
                   colorScheme="teal"
                   _focus={{ outline: "none" }}
+                  color="primary"
                 >
                   Despliegue
                 </Button>
@@ -157,6 +159,7 @@ const Projects = () => {
                   width="100%"
                   colorScheme="teal"
                   _focus={{ outline: "none" }}
+                  color="primary"
                 >
                   Repositorio
                 </Button>
@@ -172,6 +175,7 @@ const Projects = () => {
                   width="100%"
                   colorScheme="teal"
                   _focus={{ outline: "none" }}
+                  color="primary"
                 >
                   Despliegue
                 </Button>
@@ -228,6 +232,7 @@ const Projects = () => {
                   width="100%"
                   colorScheme="teal"
                   _focus={{ outline: "none" }}
+                  color="primary"
                 >
                   Repositorio
                 </Button>
@@ -243,6 +248,7 @@ const Projects = () => {
                   width="100%"
                   colorScheme="teal"
                   _focus={{ outline: "none" }}
+                  color="terciary"
                 >
                   Despliegue
                 </Button>

@@ -73,7 +73,7 @@ const NavBar = () => {
           _hover={{ textDecoration: "none" }}
           _focus={{ outline: "none" }}
         >
-          <Button colorScheme="teal" _focus={{ outline: "none" }}>
+          <Button colorScheme="teal" color="primary" _focus={{ outline: "none" }}>
             Ver Curriculum
           </Button>
         </Link>

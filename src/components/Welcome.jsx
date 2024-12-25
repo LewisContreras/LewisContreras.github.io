@@ -20,6 +20,7 @@ const Welcome = () => {
         <Img
           maxW={["80%", "80%", "30%"]}
           maxH={["35vh", "35vh", "60vh"]}
+          alt="Photo of Lewis Contreras, a software developer"
           borderRadius="20px"
           ml={["0px", "0px", "50px"]}
           src="https://i.imgur.com/92Ht5DC.jpeg"
@@ -34,7 +35,7 @@ const Welcome = () => {
             ¡Hola, bienvenido, soy Lewis Contreras!
           </Text>
           <Text py="10px" color="secondary" fontWeight="600" fontSize="3xl">
-            Front-End Developer
+            Software Developer
           </Text>
           <Text color="terciary" fontSize="xl">
             Un desarrollador en constante aprendizaje y seguimiento de las

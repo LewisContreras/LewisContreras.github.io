@@ -105,6 +105,7 @@ const FormContact = () => {
           _hover={{ textDecoration: "none" }}
           _focus={{ outline: "none" }}
           colorScheme="teal"
+          color="primary"
         >
           Enviar
         </Button>

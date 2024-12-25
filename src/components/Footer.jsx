@@ -23,6 +23,7 @@ const Footer = () => {
           _hover={{ textDecoration: "none" }}
           _focus={{ outline: "none" }}
           isExternal
+          aria-label="My Github Profile"
         >
           <Icon boxSize={5} color="terciary" as={FaGithub}></Icon>
         </Link>
@@ -31,6 +32,7 @@ const Footer = () => {
           _hover={{ textDecoration: "none" }}
           _focus={{ outline: "none" }}
           isExternal
+          aria-label="My Linkedin Profile"
         >
           <Icon boxSize={5} color="terciary" as={FaLinkedin}></Icon>
         </Link>

@@ -68,7 +68,7 @@ const NavBar = () => {
           </Link>
         </HStack>
         <Link
-          href="https://drive.google.com/file/d/11aj2WBsoFrqqSeOlejw53-wF5EhOHNAk/view?usp=sharing"
+          href="https://drive.google.com/file/d/18IylaNu-1RUHQk0VjAmgLuS3bn9-lyuu/view?usp=sharing"
           target="_blank"
           _hover={{ textDecoration: "none" }}
           _focus={{ outline: "none" }}

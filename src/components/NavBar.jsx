@@ -56,7 +56,6 @@ const NavBar = () => {
           >
             Proyectos
           </Link>
-          {/* <Link py="4px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Technologies</Link> */}
           <Link
             href="#contact"
             _hover={{ textDecoration: "none" }}
@@ -113,7 +112,6 @@ const NavBar = () => {
         >
           Proyectos
         </Link>
-        {/* <Link py="4px" width="100%" textAlign="center" borderTop="2px solid" borderColor="terciary" color="terciary" >Technologies</Link> */}
         <Link
           href="#contact"
           _hover={{ textDecoration: "none" }}

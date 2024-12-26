@@ -23,7 +23,7 @@ const Welcome = () => {
           alt="Photo of Lewis Contreras, a software developer"
           borderRadius="20px"
           ml={["0px", "0px", "50px"]}
-          src="https://i.imgur.com/92Ht5DC.jpeg"
+          src="/images/personal-photo.webp"
         />
         <VStack maxW={["auto", "auto", "50%", "40%"]}>
           <Text

@@ -1,6 +1,6 @@
-import { Flex, HStack, Icon, Link, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SocialMediaLinks } from "./SocialMediaLinks";
 
 const Footer = () => {
   return (
@@ -12,31 +12,13 @@ const Footer = () => {
       direction="column"
       alignItems="center"
       justifyContent="center"
+      gap="8px"
     >
       <Text as="p" textAlign="center" color="terciary" fontWeight="600">
         Hecho con cariño por Lewis, Copyright 2021 - Todos los derechos
         reservados
       </Text>
-      <HStack spacing={2}>
-        <Link
-          href="https://github.com/LewisContreras"
-          _hover={{ textDecoration: "none" }}
-          _focus={{ outline: "none" }}
-          isExternal
-          aria-label="My Github Profile"
-        >
-          <Icon boxSize={5} color="terciary" as={FaGithub}></Icon>
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/lewis-contreras"
-          _hover={{ textDecoration: "none" }}
-          _focus={{ outline: "none" }}
-          isExternal
-          aria-label="My Linkedin Profile"
-        >
-          <Icon boxSize={5} color="terciary" as={FaLinkedin}></Icon>
-        </Link>
-      </HStack>
+      <SocialMediaLinks />
     </Flex>
   );
 };

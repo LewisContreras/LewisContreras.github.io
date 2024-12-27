@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Center,
   Input,
@@ -10,6 +9,7 @@ import {
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import React, { useState } from "react";
+import { FormInputError } from "./FormInputError";
 
 const FormContact = () => {
   const [submit, setSubmit] = useState(false);
@@ -73,21 +73,19 @@ const FormContact = () => {
           value={formik.values.namePerson}
           onChange={formik.handleChange}
           placeholder="Nombre Completo"
+          _focus={{ borderColor: "secondary", borderWidth: "2px" }}
         />
-        {formik.errors.namePerson && submit ? (
-          <Box color="secondary">{formik.errors.namePerson}</Box>
-        ) : null}
+        <FormInputError error={formik.errors.namePerson} submit={submit} />
         <Input
           type="email"
           color="terciary"
           placeholder="Correo"
           name="email"
+          _focus={{ borderColor: "secondary", borderWidth: "2px" }}
           value={formik.values.email}
           onChange={formik.handleChange}
         />
-        {formik.errors.email && submit ? (
-          <Box color="secondary">{formik.errors.email}</Box>
-        ) : null}
+        <FormInputError error={formik.errors.email} submit={submit} />
         <Textarea
           h="120px"
           color="terciary"
@@ -95,10 +93,9 @@ const FormContact = () => {
           name="message"
           value={formik.values.message}
           onChange={formik.handleChange}
+          _focus={{ borderColor: "secondary", borderWidth: "2px" }}
         ></Textarea>
-        {formik.errors.message && submit ? (
-          <Box color="secondary">{formik.errors.message}</Box>
-        ) : null}
+        <FormInputError error={formik.errors.message} submit={submit} />
         <Button
           type="submit"
           onClick={() => setSubmit(true)}

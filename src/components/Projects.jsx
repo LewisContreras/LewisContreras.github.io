@@ -10,8 +10,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { LinkButton } from "./LinkButton";
 
-const projectsInfo = [
+const PROJECTS_INFO = [
   {
     id: 1,
     title: "Blockmaster",
@@ -60,7 +61,7 @@ const Projects = () => {
           A lo largo de mi carrera como Frontend, he tenido el privilegio de
           trabajar en proyectos retadores e increíbles.
         </GridItem>
-        {projectsInfo.map((project, index) => (
+        {PROJECTS_INFO.map((project, index) => (
           <GridItem
             colSpan={index === 0 ? ["1", "2"] : "1"}
             borderRadius="4px"
@@ -104,38 +105,8 @@ const Projects = () => {
                 left="0"
                 justifyContent="space-between"
               >
-                <Link
-                  width="45%"
-                  href={project.repository}
-                  _hover={{ textDecoration: "none" }}
-                  _focus={{ outline: "none" }}
-                  isExternal
-                >
-                  <Button
-                    width="100%"
-                    colorScheme="teal"
-                    _focus={{ outline: "none" }}
-                    color="primary"
-                  >
-                    Repositorio
-                  </Button>
-                </Link>
-                <Link
-                  width="45%"
-                  href={project.deploy}
-                  _hover={{ textDecoration: "none" }}
-                  _focus={{ outline: "none" }}
-                  isExternal
-                >
-                  <Button
-                    width="100%"
-                    colorScheme="teal"
-                    _focus={{ outline: "none" }}
-                    color="primary"
-                  >
-                    Despliegue
-                  </Button>
-                </Link>
+                <LinkButton text="Repositorio" href={project.repository} width="45%" />
+                <LinkButton text="Despliegue" href={project.deploy} width="45%" />
               </HStack>
             </Box>
           </GridItem>

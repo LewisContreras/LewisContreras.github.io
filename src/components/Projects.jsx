@@ -11,6 +11,36 @@ import {
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
+const projectsInfo = [
+  {
+    id: 1,
+    title: "Blockmaster",
+    description: "Revive una tienda icónica para rentar películas.",
+    imageWeb: "https://i.imgur.com/rwfsmdJ.png",
+    imageMobile: "https://i.imgur.com/jvChYsG.png",
+    repository: "https://github.com/LewisContreras/blockmaster-movies",
+    deploy: "https://lewiscontreras.github.io/blockmaster-movies/",
+  },
+  {
+    id: 2,
+    title: "Adoption App",
+    description: "Aplicación en la que podrás publicar y adoptar mascotas.",
+    imageWeb: "https://i.imgur.com/nx7EOsb.png",
+    imageMobile: "https://i.imgur.com/cqnEQS8.png",
+    repository: "https://github.com/LewisContreras/adoptionApp",
+    deploy: "https://lewiscontreras.github.io/adoptionApp/",
+  },
+  {
+    id: 3,
+    title: "Documentation App",
+    description: "Documentación técnica de conceptos básicos de programación.",
+    imageWeb: "https://i.imgur.com/lT1gWYh.png",
+    imageMobile: "https://i.imgur.com/5dFQyjJ.png",
+    repository: "https://github.com/LewisContreras/technicalDocumentationPage",
+    deploy: "https://lewiscontreras.github.io/technicalDocumentationPage/",
+  },
+];
+
 const Projects = () => {
   return (
     <Box id="projects" py="90px" px="5%" bgColor="secondary" maxWidth="100vw">
@@ -30,232 +60,86 @@ const Projects = () => {
           A lo largo de mi carrera como Frontend, he tenido el privilegio de
           trabajar en proyectos retadores e increíbles.
         </GridItem>
-        <GridItem
-          colSpan={["1", "2"]}
-          borderRadius="4px"
-          bgImage={[
-            "url('https://i.imgur.com/rwfsmdJ.png')",
-            "url('https://i.imgur.com/jvChYsG.png')",
-          ]}
-          bgPosition="center"
-          bgRepeat="no-repeat"
-          boxShadow="2xl"
-          bgSize="cover"
-          position="relative"
-          zIndex="0"
-        >
-          <Box
+        {projectsInfo.map((project, index) => (
+          <GridItem
+            colSpan={index === 0 ? ["1", "2"] : "1"}
+            borderRadius="4px"
+            bgImage={[
+              `url('${project.imageWeb}')`,
+              `url('${project.imageMobile}')`,
+            ]}
+            bgPosition="center"
+            bgRepeat="no-repeat"
             boxShadow="2xl"
-            borderRadius="8px"
-            position="absolute"
-            p="10px"
-            bottom="30px"
-            left="-10px"
-            bgColor="primary"
-            w={["95%", "50%"]}
-            height="40%"
+            bgSize="cover"
+            position="relative"
+            zIndex="0"
           >
-            <Text fontWeight="600" fontSize="3xl" color="terciary">
-              Blockmaster
-            </Text>
-            <Text fontSize={["xl", "xl", "xl", "2xl"]} color="terciary">
-              {" "}
-              Revive una tienda icónica para rentar películas.
-            </Text>
-            <HStack
-              px="10px"
+            <Box
+              boxShadow="2xl"
+              borderRadius="8px"
               position="absolute"
-              bottom="10px"
-              right="0"
-              left="0"
-              justifyContent="space-between"
+              p="10px"
+              bottom="30px"
+              left="-10px"
+              bgColor="primary"
+              w={index === 0 ? ["95%", "50%", "35%"] : ["95%", "90%", "75%"]}
+              height={index === 0 ? ["40%", "30%"] : ["40%", "50%"]}
             >
-              <Link
-                width="45%"
-                href="https://github.com/LewisContreras/blockmaster-movies"
-                _hover={{ textDecoration: "none" }}
-                _focus={{ outline: "none" }}
-                isExternal
+              <Text
+                fontWeight="600"
+                fontSize={["3xl", "xl", "2xl"]}
+                color="terciary"
               >
-                <Button
-                  width="100%"
-                  colorScheme="teal"
-                  _focus={{ outline: "none" }}
-                  color="primary"
-                >
-                  Repositorio
-                </Button>
-              </Link>
-              <Link
-                width="45%"
-                href="https://lewiscontreras.github.io/blockmaster-movies/"
-                _hover={{ textDecoration: "none" }}
-                _focus={{ outline: "none" }}
-                isExternal
+                {project.title}
+              </Text>
+              <Text fontSize={["xl", "16px"]} color="terciary">
+                {project.description}
+              </Text>
+              <HStack
+                px="10px"
+                position="absolute"
+                bottom="10px"
+                right="0"
+                left="0"
+                justifyContent="space-between"
               >
-                <Button
-                  width="100%"
-                  colorScheme="teal"
+                <Link
+                  width="45%"
+                  href={project.repository}
+                  _hover={{ textDecoration: "none" }}
                   _focus={{ outline: "none" }}
-                  color="primary"
+                  isExternal
                 >
-                  Despliegue
-                </Button>
-              </Link>
-            </HStack>
-          </Box>
-        </GridItem>
-        <GridItem
-          borderRadius="4px"
-          bgImage={[
-            "url('https://i.imgur.com/nx7EOsb.png')",
-            "url('https://i.imgur.com/cqnEQS8.png')",
-          ]}
-          bgPosition="center"
-          bgRepeat="no-repeat"
-          boxShadow="2xl"
-          bgSize="cover"
-          position="relative"
-          zIndex="0"
-        >
-          <Box
-            boxShadow="2xl"
-            borderRadius="8px"
-            position="absolute"
-            p="10px"
-            bottom="30px"
-            left="-10px"
-            bgColor="primary"
-            w={["95%", "90%", "70%"]}
-            height={["40%", "50%"]}
-          >
-            <Text
-              fontWeight="600"
-              fontSize={["3xl", "xl", "2xl"]}
-              color="terciary"
-            >
-              App de adopción
-            </Text>
-            <Text fontSize={["xl", "16px"]} color="terciary">
-              {" "}
-              Aplicación en la que podrás publicar y adoptar mascotas.
-            </Text>
-            <HStack
-              px="10px"
-              position="absolute"
-              bottom="10px"
-              right="0"
-              left="0"
-              justifyContent="space-between"
-            >
-              <Link
-                width="45%"
-                href="https://github.com/LewisContreras/adoptionApp"
-                _hover={{ textDecoration: "none" }}
-                _focus={{ outline: "none" }}
-                isExternal
-              >
-                <Button
-                  width="100%"
-                  colorScheme="teal"
+                  <Button
+                    width="100%"
+                    colorScheme="teal"
+                    _focus={{ outline: "none" }}
+                    color="primary"
+                  >
+                    Repositorio
+                  </Button>
+                </Link>
+                <Link
+                  width="45%"
+                  href={project.deploy}
+                  _hover={{ textDecoration: "none" }}
                   _focus={{ outline: "none" }}
-                  color="primary"
+                  isExternal
                 >
-                  Repositorio
-                </Button>
-              </Link>
-              <Link
-                width="45%"
-                href="https://lewiscontreras.github.io/adoptionApp/"
-                _hover={{ textDecoration: "none" }}
-                _focus={{ outline: "none" }}
-                isExternal
-              >
-                <Button
-                  width="100%"
-                  colorScheme="teal"
-                  _focus={{ outline: "none" }}
-                  color="primary"
-                >
-                  Despliegue
-                </Button>
-              </Link>
-            </HStack>
-          </Box>
-        </GridItem>
-        <GridItem
-          borderRadius="4px"
-          bgImage={[
-            "url('https://i.imgur.com/lT1gWYh.png')",
-            "url('https://i.imgur.com/5dFQyjJ.png')",
-          ]}
-          bgPosition="center"
-          bgRepeat="no-repeat"
-          boxShadow="2xl"
-          bgSize="cover"
-          position="relative"
-          zIndex="0"
-        >
-          <Box
-            boxShadow="2xl"
-            borderRadius="8px"
-            position="absolute"
-            p="10px"
-            bottom="30px"
-            left="-10px"
-            bgColor="primary"
-            w={["95%", "90%", "70%"]}
-            height={["40%", "50%"]}
-          >
-            <Text fontWeight="600" fontSize={["3xl", "2xl"]} color="terciary">
-              Documentación
-            </Text>
-            <Text fontSize={["xl", "16px"]} color="terciary">
-              Documentación técnica de conceptos básicos de programación.
-            </Text>
-            <HStack
-              px="10px"
-              position="absolute"
-              bottom="10px"
-              right="0"
-              left="0"
-              justifyContent="space-between"
-            >
-              <Link
-                width="45%"
-                href="https://github.com/LewisContreras/technicalDocumentationPage"
-                _hover={{ textDecoration: "none" }}
-                _focus={{ outline: "none" }}
-                isExternal
-              >
-                <Button
-                  width="100%"
-                  colorScheme="teal"
-                  _focus={{ outline: "none" }}
-                  color="primary"
-                >
-                  Repositorio
-                </Button>
-              </Link>
-              <Link
-                width="45%"
-                _hover={{ textDecoration: "none" }}
-                _focus={{ outline: "none" }}
-                href="https://lewiscontreras.github.io/technicalDocumentationPage/"
-                isExternal
-              >
-                <Button
-                  width="100%"
-                  colorScheme="teal"
-                  _focus={{ outline: "none" }}
-                  color="terciary"
-                >
-                  Despliegue
-                </Button>
-              </Link>
-            </HStack>
-          </Box>
-        </GridItem>
+                  <Button
+                    width="100%"
+                    colorScheme="teal"
+                    _focus={{ outline: "none" }}
+                    color="primary"
+                  >
+                    Despliegue
+                  </Button>
+                </Link>
+              </HStack>
+            </Box>
+          </GridItem>
+        ))}
       </Grid>
       <Link
         display={["inline-block", "block"]}

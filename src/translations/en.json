@@ -1,1 +1,68 @@
-{}
+{
+  "footer": {
+    "copyright": "Made with love by Lewis, Copyright 2021 - All rights reserved",
+    "github": {
+      "label": "My GitHub profile"
+    },
+    "linkedin": {
+      "label": "My LinkedIn profile"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description1": "It seems like magic, it works with code.",
+    "description2": "Throughout my career as a Frontend developer, I have had the privilege of working on challenging and incredible projects.",
+    "moreProjects": "See more projects",
+    "blockmaster": {
+      "title": "Blockmaster",
+      "description": "Revive an iconic movie rental store."
+    },
+    "adoptionApp": {
+      "title": "Adoption App",
+      "description": "An application where you can post and adopt pets."
+    },
+    "documentationPage": {
+      "title": "Documentation App",
+      "description": "Technical documentation of basic programming concepts."
+    },
+    "deployText": "Deployment",
+    "repositoryText": "Repository"
+  },
+  "navBar": {
+    "welcome": {
+      "text": "Welcome"
+    },
+    "projects": {
+      "text": "Projects"
+    },
+    "contact": {
+      "text": "Contact"
+    },
+    "cv": {
+      "text": "View CV"
+    }
+  },
+  "welcome": {
+    "presentation": "Hello, welcome, I'm Lewis Contreras!",
+    "position": "Software Developer",
+    "moreAboutMe": "A developer constantly learning and following new technologies.",
+    "altMainPhoto": "Photo of Lewis Contreras, a passionate software developer"
+  },
+  "contact": {
+    "title": "Contact",
+    "contactInfo": "Contact Information",
+    "emailInput": {
+      "placeholder": "Email"
+    },
+    "nameInput": {
+      "placeholder": "Full name"
+    },
+    "messageInput": {
+      "placeholder": "Message..."
+    },
+    "description": "If you are interested in working with me on your next project, feel free to get in touch.",
+    "sendButton": "Send",
+    "requiredInput": "This field is required",
+    "emailRequired": "You must enter an email"
+  }
+}

@@ -20,8 +20,7 @@ const Welcome = () => {
         justifyContent="center"
       >
         <Img
-          maxW={["80%", "80%", "30%"]}
-          maxH={["35vh", "35vh", "60vh"]}
+          w={["40%", "20%"]}
           alt={t.welcome.altMainPhoto}
           borderRadius="20px"
           ml={["0px", "0px", "50px"]}

@@ -10,9 +10,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import React, { useState } from "react";
 import { FormInputError } from "./FormInputError";
+import { useLanguage } from "../hooks/useLanguage";
 
 const FormContact = () => {
   const [submit, setSubmit] = useState(false);
+  const { t } = useLanguage();
 
   const formik = useFormik({
     initialValues: {
@@ -21,11 +23,11 @@ const FormContact = () => {
       message: "",
     },
     validationSchema: Yup.object({
-      namePerson: Yup.string().required("Este campo es requerido"),
+      namePerson: Yup.string().required(t.contact.requiredInput),
       email: Yup.string()
-        .email("Debe ingresar un correo")
-        .required("Este campo es requerido"),
-      message: Yup.string().required("Este campo es requerido"),
+        .email(t.contact.emailRequired)
+        .required(t.contact.requiredInput),
+      message: Yup.string().required(t.contact.requiredInput),
     }),
     validateOnChange: (values) => {
       console.log(values);
@@ -60,11 +62,10 @@ const FormContact = () => {
         bgColor="primary"
       >
         <Text fontSize="3xl" color="secondary" fontWeight="600">
-          Contacto
+          {t.contact.title}
         </Text>
         <Text fontSize="xl" color="terciary">
-          Si está interesado en trabajar conmigo en su próximo proyecto, no dude
-          en ponerse en contacto.
+          {t.contact.description}
         </Text>
         <Input
           type="text"
@@ -72,14 +73,14 @@ const FormContact = () => {
           name="namePerson"
           value={formik.values.namePerson}
           onChange={formik.handleChange}
-          placeholder="Nombre Completo"
+          placeholder={t.contact.nameInput.placeholder}
           _focus={{ borderColor: "secondary", borderWidth: "2px" }}
         />
         <FormInputError error={formik.errors.namePerson} submit={submit} />
         <Input
           type="email"
           color="terciary"
-          placeholder="Correo"
+          placeholder={t.contact.emailInput.placeholder}
           name="email"
           _focus={{ borderColor: "secondary", borderWidth: "2px" }}
           value={formik.values.email}
@@ -89,7 +90,7 @@ const FormContact = () => {
         <Textarea
           h="120px"
           color="terciary"
-          placeholder="Mensaje..."
+          placeholder={t.contact.messageInput.placeholder}
           name="message"
           value={formik.values.message}
           onChange={formik.handleChange}
@@ -104,7 +105,7 @@ const FormContact = () => {
           colorScheme="teal"
           color="primary"
         >
-          Enviar
+          {t.contact.sendButton}
         </Button>
       </VStack>
     </Center>

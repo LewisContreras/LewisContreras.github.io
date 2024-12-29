@@ -2,27 +2,26 @@ import React, { useState } from "react";
 import { Center, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import "../styles/animations.css";
+import { useLanguage } from "../hooks/useLanguage";
 
 const MENU_OPTIONS = [
   {
     id: 1,
-    title: "Bienvenida",
-    href: "#welcome",
+    title: "welcome",
   },
   {
     id: 2,
-    title: "Proyectos",
-    href: "#projects",
+    title: "projects",
   },
   {
     id: 3,
-    title: "Contacto",
-    href: "#contact",
+    title: "contact",
   },
 ];
 
 const MenuOptions = () => {
   const [menu, setMenu] = useState(false);
+  const { t } = useLanguage();
   return (
     <>
       <HStack display={["none", "flex"]} spacing="30px">
@@ -31,11 +30,11 @@ const MenuOptions = () => {
             key={option.id}
             _hover={{ textDecoration: "none" }}
             _focus={{ outline: "none" }}
-            href={option.href}
+            href={`#${option.title}`}
             fontWeight="600"
             color="terciary"
           >
-            {option.title}
+            {t.navBar[option.title].text}
           </Link>
         ))}
       </HStack>
@@ -64,7 +63,7 @@ const MenuOptions = () => {
             key={option.id}
             _hover={{ textDecoration: "none" }}
             _focus={{ outline: "none" }}
-            href={option.href}
+            href={`#${option.title}`}
             py="4px"
             width="100%"
             textAlign="center"
@@ -72,7 +71,7 @@ const MenuOptions = () => {
             borderColor="terciary"
             color="terciary"
           >
-            {option.title}
+            {t.navBar[option.title].text}
           </Link>
         ))}
       </VStack>

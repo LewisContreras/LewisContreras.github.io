@@ -10,12 +10,14 @@ import {
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FeaturedProjects } from "./FeaturedProjects";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Projects = () => {
+  const { t } = useLanguage();
   return (
     <Box id="projects" py="90px" px="5%" bgColor="secondary" maxWidth="100vw">
       <Text pb="30px" color="primary" fontSize="3xl" fontWeight="600">
-        Proyectos
+        {t.projects.title}
       </Text>
       <Grid
         maxWidth="100vw"
@@ -24,11 +26,10 @@ const Projects = () => {
         gap="40px"
       >
         <GridItem color="primary" fontSize="26px" fontWeight="600">
-          Parece magia, funciona con código.
+          {t.projects.description1}
         </GridItem>
         <GridItem color="primary" fontSize="26px" fontWeight="600">
-          A lo largo de mi carrera como Frontend, he tenido el privilegio de
-          trabajar en proyectos retadores e increíbles.
+          {t.projects.description2}
         </GridItem>
         <FeaturedProjects />
       </Grid>
@@ -53,7 +54,7 @@ const Projects = () => {
           fontSize="xl"
           color="primary"
         >
-          <Text>Ver más proyectos</Text>
+          <Text>{t.projects.moreProjects}</Text>
           <Icon as={FaArrowRight} />
         </HStack>
       </Link>

@@ -1,8 +1,11 @@
 import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { SocialMediaLinks } from "./SocialMediaLinks";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Footer = () => {
+
+  const { t } = useLanguage();
   return (
     <Flex
       px="5%"
@@ -15,8 +18,7 @@ const Footer = () => {
       gap="8px"
     >
       <Text as="p" textAlign="center" color="terciary" fontWeight="600">
-        Hecho con cariño por Lewis, Copyright 2021 - Todos los derechos
-        reservados
+        {t.footer.copyright}
       </Text>
       <SocialMediaLinks />
     </Flex>

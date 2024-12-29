@@ -1,8 +1,10 @@
 import { Box, GridItem, HStack, Text } from "@chakra-ui/react";
 import React from "react";
 import { LinkButton } from "./LinkButton";
+import { useLanguage } from "../hooks/useLanguage";
 
 const ProjectCard = ({ project, index }) => {
+  const { t } = useLanguage();
   return (
     <GridItem
       colSpan={index === 0 ? ["1", "2"] : "1"}
@@ -27,10 +29,10 @@ const ProjectCard = ({ project, index }) => {
         height={index === 0 ? ["30%"] : ["30%", "50%"]}
       >
         <Text fontWeight="600" fontSize={["3xl", "xl", "2xl"]} color="terciary">
-          {project.title}
+          {t.projects[project.title].title}
         </Text>
         <Text fontSize={["xl", "16px"]} color="terciary">
-          {project.description}
+          {t.projects[project.title].description}
         </Text>
         <HStack
           px="10px"
@@ -41,11 +43,15 @@ const ProjectCard = ({ project, index }) => {
           justifyContent="space-between"
         >
           <LinkButton
-            text="Repositorio"
+            text={t.projects.repositoryText}
             href={project.repository}
             width="45%"
           />
-          <LinkButton text="Despliegue" href={project.deploy} width="45%" />
+          <LinkButton
+            text={t.projects.deployText}
+            href={project.deploy}
+            width="45%"
+          />
         </HStack>
       </Box>
     </GridItem>

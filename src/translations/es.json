@@ -1,0 +1,68 @@
+{
+  "footer": {
+    "copyright": "Hecho con cariño por Lewis, Copyright 2021 - Todos los derechos reservados",
+    "github": {
+      "label": "Mi perfil de GitHub"
+    },
+    "linkedin": {
+      "label": "Mi perfil de LinkedIn"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description1": "Parece magia, funciona con código.",
+    "description2": "A lo largo de mi carrera como Frontend, he tenido el privilegio de trabajar en proyectos retadores e increíbles.",
+    "moreProjects": "Ver más proyectos",
+    "blockmaster": {
+      "title": "Blockmaster",
+      "description": "Revive una tienda icónica para rentar películas."
+    },
+    "adoptionApp": {
+      "title": "Adoption App",
+      "description": "Aplicación en la que podrás publicar y adoptar mascotas."
+    },
+    "documentationPage": {
+      "title": "Documentation App",
+      "description": "Documentación técnica de conceptos básicos de programación."
+    },
+    "deployText": "Despliegue",
+    "repositoryText": "Repositorio"
+  },
+  "navBar": {
+    "welcome": {
+      "text": "Bienvenida"
+    },
+    "projects": {
+      "text": "Proyectos"
+    },
+    "contact": {
+      "text": "Contacto"
+    },
+    "cv": {
+      "text": "Ver HV"
+    }
+  },
+  "welcome": {
+    "presentation": "¡Hola, bienvenido, soy Lewis Contreras!",
+    "position": "Desarrollador de Software",
+    "moreAboutMe": "Un desarrollador en constante aprendizaje y seguimiento de las nuevas tecnologías.",
+    "altMainPhoto": "Foto de Lewis Contreras, un desarrollador de software apasionado"
+  },
+  "contact": {
+    "title": "Contacto",
+    "contactInfo": "Información de contacto",
+    "emailInput": {
+      "placeholder": "Correo"
+    },
+    "nameInput": {
+      "placeholder": "Nombre completo"
+    },
+    "messageInput": {
+      "placeholder": "Mensaje..."
+    },
+    "description": "Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto.",
+    "sendButton": "Enviar",
+    "requiredInput": "Este campo es requerido",
+    "emailRequired": "Debe ingresar un correo"
+  }
+}

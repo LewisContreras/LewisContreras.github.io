@@ -64,6 +64,7 @@ const FormContact = () => {
         clipPath="polygon(0 0, 100% 100%, 100% 0)"
       ></Box>
       <VStack
+        className="fade-in"
         spacing="10px"
         px="10px"
         py="10px"

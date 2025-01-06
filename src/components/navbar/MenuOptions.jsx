@@ -49,7 +49,7 @@ const MenuOptions = () => {
         <Icon color="terciary" fontSize="20px" as={FaBars} />
       </Center>
       <VStack
-        className="scene_fast scene_element--clippathdown"
+        className="scene_element scene_element--clippathdown"
         display={!menu ? "none" : ["flex", "none"]}
         bgColor="primary"
         position="absolute"

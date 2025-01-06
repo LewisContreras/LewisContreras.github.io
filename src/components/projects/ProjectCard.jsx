@@ -7,6 +7,7 @@ const ProjectCard = ({ project, index }) => {
   const { t } = useLanguage();
   return (
     <GridItem
+      className="fade-in"
       colSpan={index === 0 ? ["1", "2"] : "1"}
       borderRadius="4px"
       bgImage={[`url('${project.imageWeb}')`, `url('${project.imageMobile}')`]}

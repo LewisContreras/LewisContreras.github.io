@@ -1,7 +1,7 @@
 import { HStack, Icon, Link } from "@chakra-ui/react";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { useLanguage } from "../hooks/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const SOCIAL_MEDIA_INFO = [
     {

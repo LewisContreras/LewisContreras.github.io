@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Center, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
-import "../styles/animations.css";
-import { useLanguage } from "../hooks/useLanguage";
+import "../../styles/animations.css";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const MENU_OPTIONS = [
   {

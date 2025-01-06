@@ -1,6 +1,6 @@
 import { Center, Flex, Img, Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import { useLanguage } from "../hooks/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const Welcome = () => {
   const { t } = useLanguage();

@@ -10,7 +10,7 @@ import {
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FeaturedProjects } from "./FeaturedProjects";
-import { useLanguage } from "../hooks/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const Projects = () => {
   const { t } = useLanguage();

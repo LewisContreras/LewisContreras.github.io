@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@chakra-ui/react";
-import { useLanguage } from "../hooks/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const LanguageButton = () => {
   const { t, toggleLanguage } = useLanguage();

@@ -1,7 +1,7 @@
 import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { SocialMediaLinks } from "./SocialMediaLinks";
-import { useLanguage } from "../hooks/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const Footer = () => {
 

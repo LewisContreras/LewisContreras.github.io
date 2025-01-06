@@ -1,9 +1,9 @@
 import { Box, HStack } from "@chakra-ui/react";
 import React from "react";
 import { MenuOptions } from "./MenuOptions";
-import { LinkButton } from "./LinkButton";
+import { LinkButton } from "../common/LinkButton";
 import { LanguageButton } from "./LanguageButton";
-import { useLanguage } from "../hooks/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const NavBar = () => {
   const { t } = useLanguage();

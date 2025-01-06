@@ -11,7 +11,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import React, { useState } from "react";
 import { FormInputError } from "./FormInputError";
-import { useLanguage } from "../hooks/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const FormContact = () => {
   const [submit, setSubmit] = useState(false);

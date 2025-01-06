@@ -1,7 +1,7 @@
 import { Box, GridItem, HStack, Text } from "@chakra-ui/react";
 import React from "react";
-import { LinkButton } from "./LinkButton";
-import { useLanguage } from "../hooks/useLanguage";
+import { LinkButton } from "../common/LinkButton";
+import { useLanguage } from "../../hooks/useLanguage";
 
 const ProjectCard = ({ project, index }) => {
   const { t } = useLanguage();

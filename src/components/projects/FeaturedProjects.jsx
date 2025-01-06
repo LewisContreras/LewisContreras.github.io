@@ -1,5 +1,6 @@
 import React from "react";
 import { ProjectCard } from "./ProjectCard";
+import { Grid } from "@chakra-ui/react";
 
 const PROJECTS_INFO = [
   {
@@ -30,11 +31,17 @@ const PROJECTS_INFO = [
 
 const FeaturedProjects = () => {
   return (
-    <>
+    <Grid
+      mt="40px"
+      maxWidth="100vw"
+      gridTemplateColumns={["1fr", "1fr 1fr"]}
+      templateRows={["600px 600px 600px", "540px 350px"]}
+      gap="40px"
+    >
       {PROJECTS_INFO.map((project, index) => (
         <ProjectCard key={project.id} project={project} index={index} />
       ))}
-    </>
+    </Grid>
   );
 };
 

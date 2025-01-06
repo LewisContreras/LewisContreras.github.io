@@ -1,4 +1,4 @@
-import { Box, Grid, HStack, Icon, Link, Text } from "@chakra-ui/react";
+import { Box, HStack, Icon, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FeaturedProjects } from "./FeaturedProjects";
@@ -23,15 +23,7 @@ const Projects = () => {
       <Text color="primary" fontSize="26px" fontWeight="600">
         {t.projects.description}
       </Text>
-      <Grid
-        mt="40px"
-        maxWidth="100vw"
-        gridTemplateColumns={["1fr", "1fr 1fr"]}
-        templateRows={["600px 600px 600px", "540px 350px"]}
-        gap="40px"
-      >
-        <FeaturedProjects />
-      </Grid>
+      <FeaturedProjects />
       <Link
         display={["inline-block", "block"]}
         _hover={{ textDecoration: "none" }}

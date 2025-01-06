@@ -15,7 +15,24 @@ import { useLanguage } from "../hooks/useLanguage";
 const Projects = () => {
   const { t } = useLanguage();
   return (
-    <Box id="projects" py="90px" px="5%" bgColor="secondary" maxWidth="100vw">
+    <Box
+      id="projects"
+      py="90px"
+      bgColor="secondary"
+      maxWidth="100vw"
+      position="relative"
+      px="5%"
+    >
+      <Box
+        position="absolute"
+        bgColor="primary"
+        left="0"
+        top="0"
+        width="100%"
+        height="70px"
+        zIndex="2"
+        clipPath="polygon(0 0, 100% 100%, 100% 0)"
+      ></Box>
       <Text pb="30px" color="primary" fontSize="3xl" fontWeight="600">
         {t.projects.title}
       </Text>

@@ -5,6 +5,7 @@ import {
   Text,
   Textarea,
   VStack,
+  Box,
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -46,11 +47,22 @@ const FormContact = () => {
   return (
     <Center
       id="contact"
-      py="40px"
+      pt="50px"
       maxWidth="100vw"
-      minH="calc(100vh - 140px)"
+      minH="calc(100vh - 90px)"
       bgColor="terciary"
+      position="relative"
     >
+      <Box
+        position="absolute"
+        bgColor="secondary"
+        left="0"
+        top="0"
+        width="100%"
+        height="70px"
+        zIndex="2"
+        clipPath="polygon(0 0, 100% 100%, 100% 0)"
+      ></Box>
       <VStack
         spacing="10px"
         px="10px"

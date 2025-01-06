@@ -10,8 +10,7 @@
   },
   "projects": {
     "title": "Proyectos",
-    "description1": "Parece magia, funciona con código.",
-    "description2": "A lo largo de mi carrera como Frontend, he tenido el privilegio de trabajar en proyectos retadores e increíbles.",
+    "description": "A lo largo de mi carrera como Desarrollador de Software, he tenido el privilegio de trabajar en proyectos retadores e increíbles.",
     "moreProjects": "Ver más proyectos",
     "blockmaster": {
       "title": "Blockmaster",

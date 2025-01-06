@@ -5,13 +5,13 @@ import {
   Text,
   Textarea,
   VStack,
-  Box,
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import React, { useState } from "react";
 import { FormInputError } from "./FormInputError";
 import { useLanguage } from "../../hooks/useLanguage";
+import { DiagonalSectionDivider } from "../common/DiagonalSectionDivider";
 
 const FormContact = () => {
   const [submit, setSubmit] = useState(false);
@@ -53,16 +53,7 @@ const FormContact = () => {
       bgColor="terciary"
       position="relative"
     >
-      <Box
-        position="absolute"
-        bgColor="secondary"
-        left="0"
-        top="0"
-        width="100%"
-        height="70px"
-        zIndex="2"
-        clipPath="polygon(0 0, 100% 100%, 100% 0)"
-      ></Box>
+      <DiagonalSectionDivider color="secondary" />
       <VStack
         className="fade-in"
         spacing="10px"

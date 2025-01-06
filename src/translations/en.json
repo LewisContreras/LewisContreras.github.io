@@ -10,8 +10,7 @@
   },
   "projects": {
     "title": "Projects",
-    "description1": "It seems like magic, it works with code.",
-    "description2": "Throughout my career as a Frontend developer, I have had the privilege of working on challenging and incredible projects.",
+    "description": "Throughout my career as a Software Developer, I have had the privilege of working on challenging and incredible projects.",
     "moreProjects": "See more projects",
     "blockmaster": {
       "title": "Blockmaster",

@@ -1,16 +1,9 @@
-import {
-  Box,
-  Grid,
-  GridItem,
-  HStack,
-  Icon,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Grid, HStack, Icon, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { FeaturedProjects } from "./FeaturedProjects";
 import { useLanguage } from "../../hooks/useLanguage";
+import { DiagonalSectionDivider } from "../common/DiagonalSectionDivider";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -23,38 +16,27 @@ const Projects = () => {
       position="relative"
       px="5%"
     >
-      <Box
-        position="absolute"
-        bgColor="primary"
-        left="0"
-        top="0"
-        width="100%"
-        height="70px"
-        zIndex="2"
-        clipPath="polygon(0 0, 100% 100%, 100% 0)"
-      ></Box>
+      <DiagonalSectionDivider color="primary" />
       <Text pb="30px" color="primary" fontSize="3xl" fontWeight="600">
         {t.projects.title}
       </Text>
+      <Text color="primary" fontSize="26px" fontWeight="600">
+        {t.projects.description}
+      </Text>
       <Grid
+        mt="40px"
         maxWidth="100vw"
         gridTemplateColumns={["1fr", "1fr 1fr"]}
-        templateRows={["0.5fr 1fr 600px 600px 600px", "1fr 540px 350px"]}
+        templateRows={["600px 600px 600px", "540px 350px"]}
         gap="40px"
       >
-        <GridItem color="primary" fontSize="26px" fontWeight="600">
-          {t.projects.description1}
-        </GridItem>
-        <GridItem color="primary" fontSize="26px" fontWeight="600">
-          {t.projects.description2}
-        </GridItem>
         <FeaturedProjects />
       </Grid>
       <Link
         display={["inline-block", "block"]}
         _hover={{ textDecoration: "none" }}
         _focus={{ outline: "none" }}
-        mt="20px"
+        mt="30px"
         w={["100%", "300px"]}
         mx="auto"
         href="https://github.com/LewisContreras?tab=repositories"
@@ -70,6 +52,7 @@ const Projects = () => {
           fontWeight="600"
           fontSize="xl"
           color="primary"
+          boxShadow="2xl"
         >
           <Text>{t.projects.moreProjects}</Text>
           <Icon as={FaArrowRight} />

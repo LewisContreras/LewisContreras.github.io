@@ -14,7 +14,6 @@ import { useLanguage } from "../../hooks/useLanguage";
 import { DiagonalSectionDivider } from "../common/DiagonalSectionDivider";
 
 const FormContact = () => {
-  const [submit, setSubmit] = useState(false);
   const { t } = useLanguage();
 
   const formik = useFormik({
@@ -33,14 +32,31 @@ const FormContact = () => {
     validateOnChange: (values) => {
       console.log(values);
     },
-    onSubmit: (values) => {
-      setSubmit(false);
-      let sendEmail = document.createElement("a");
-      sendEmail.setAttribute(
-        "href",
-        `mailto:legiconba4@gmail.com?subject=${values.namePerson} ${values.email}&body=${values.message}`
-      );
-      sendEmail.click();
+    onSubmit: async (values, { resetForm }) => {
+      const formData = {
+        access_key: "776f856d-8f53-44b8-8376-83f5c4dec267",
+        subject: `Contact Form Submission from ${values.namePerson}`,
+        from_name: values.namePerson,
+        from_email: values.email,
+        message: values.message,
+      };
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          alert("Email sent successfully!");
+          resetForm();
+        } else {
+          alert("Failed to send email.");
+        }
+      } catch (error) {
+        alert("An error occurred. Please try again.");
+      }
     },
   });
 
@@ -78,9 +94,16 @@ const FormContact = () => {
           value={formik.values.namePerson}
           onChange={formik.handleChange}
           placeholder={t.contact.nameInput.placeholder}
-          _focus={{ borderColor: "secondary", borderWidth: "2px" }}
+          _focus={{
+            borderColor: "secondary",
+            borderWidth: "2px",
+            bgColor: "primary",
+          }}
         />
-        <FormInputError error={formik.errors.namePerson} submit={submit} />
+        <FormInputError
+          error={formik.errors.namePerson}
+          touched={formik.touched.namePerson}
+        />
         <Input
           type="email"
           color="terciary"
@@ -90,7 +113,10 @@ const FormContact = () => {
           value={formik.values.email}
           onChange={formik.handleChange}
         />
-        <FormInputError error={formik.errors.email} submit={submit} />
+        <FormInputError
+          error={formik.errors.email}
+          touched={formik.touched.email}
+        />
         <Textarea
           h="120px"
           color="terciary"
@@ -100,10 +126,12 @@ const FormContact = () => {
           onChange={formik.handleChange}
           _focus={{ borderColor: "secondary", borderWidth: "2px" }}
         ></Textarea>
-        <FormInputError error={formik.errors.message} submit={submit} />
+        <FormInputError
+          error={formik.errors.message}
+          touched={formik.touched.message}
+        />
         <Button
           type="submit"
-          onClick={() => setSubmit(true)}
           _hover={{ textDecoration: "none" }}
           _focus={{ outline: "none" }}
           colorScheme="teal"

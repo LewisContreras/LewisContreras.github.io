@@ -4,20 +4,7 @@ import { FaBars } from "react-icons/fa";
 import "../../styles/animations.css";
 import { useLanguage } from "../../hooks/useLanguage";
 
-const MENU_OPTIONS = [
-  {
-    id: 1,
-    title: "welcome",
-  },
-  {
-    id: 2,
-    title: "projects",
-  },
-  {
-    id: 3,
-    title: "contact",
-  },
-];
+const MENU_OPTIONS = ["welcome", "projects", "contact"];
 
 const MenuOptions = () => {
   const [menu, setMenu] = useState(false);
@@ -25,16 +12,16 @@ const MenuOptions = () => {
   return (
     <>
       <HStack display={["none", "flex"]} spacing="30px">
-        {MENU_OPTIONS.map((option) => (
+        {MENU_OPTIONS.map((option, index) => (
           <Link
-            key={option.id}
+            key={index}
             _hover={{ textDecoration: "none" }}
             _focus={{ outline: "none" }}
-            href={`#${option.title}`}
+            href={`#${option}`}
             fontWeight="600"
             color="terciary"
           >
-            {t.navBar[option.title].text}
+            {t.navBar[option].text}
           </Link>
         ))}
       </HStack>
@@ -58,12 +45,12 @@ const MenuOptions = () => {
         width="100vw"
         zIndex="10"
       >
-        {MENU_OPTIONS.map((option) => (
+        {MENU_OPTIONS.map((option, index) => (
           <Link
-            key={option.id}
+            key={index}
             _hover={{ textDecoration: "none" }}
             _focus={{ outline: "none" }}
-            href={`#${option.title}`}
+            href={`#${option}`}
             py="4px"
             width="100%"
             textAlign="center"
@@ -71,7 +58,7 @@ const MenuOptions = () => {
             borderColor="terciary"
             color="terciary"
           >
-            {t.navBar[option.title].text}
+            {t.navBar[option].text}
           </Link>
         ))}
       </VStack>
